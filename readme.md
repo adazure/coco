@@ -25,20 +25,29 @@
   
  
 ### Örnek Kullanım
+<<<<<<< HEAD
   
 > <script>
     function onClick(e){
+=======
+```  
+<script>function onClick(e){
+>>>>>>> refs/remotes/origin/master
       console.log(e);
       console.log(e.items);
       console.log(e.event);
     }
 </script>
 
-> <div class="item" data-api-url="https://jsonplaceholder.typicode.com/comments">
-            <div class="name" data-html="name"></div>
-            <div class="email"><span data-html="email"></span><i class="premium" data-show="$data.premium == true">Premium</i>    </div>
-            <div class="body" data-html="body"></div>
-            <div>
-                <input type="button" data-click="onClick" value="More details" />
-            </div>
-        </div>
+<div class="item" data-api-url="https://jsonplaceholder.typicode.com/comments">
+  <div class="name" data-html="name"></div>
+     <div class="email">
+        <span data-html="email"></span>
+        <i class="premium" data-show="$data.premium == true">Premium</i>
+     </div>
+     <div class="body" data-html="body"></div>
+     <div>
+        <input type="button" data-click="onClick" value="More details" />
+      </div>
+</div>
+```
