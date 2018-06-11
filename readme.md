@@ -25,19 +25,13 @@
   
  
 ### Örnek Kullanım
-<<<<<<< HEAD
-<<<<<<< HEAD
-  
-> <script>
+
+```
+<script>
     function onClick(e){
-=======
-```  
 <script>function onClick(e){
->>>>>>> refs/remotes/origin/master
-=======
-```  
+  
 <script>function onClick(e){
->>>>>>> refs/remotes/origin/master
       console.log(e);
       console.log(e.items);
       console.log(e.event);
