@@ -26,13 +26,14 @@
  
 ### Örnek Kullanım
   
-> <script>function onClick(e){
+<script>function onClick(e){
       console.log(e);
       console.log(e.items);
       console.log(e.event);
-    }</script>
+    }
+</script>
     
-> <div class="item" data-api-url="https://jsonplaceholder.typicode.com/comments">
+<div class="item" data-api-url="https://jsonplaceholder.typicode.com/comments">
             <div class="name" data-html="name"></div>
             <div class="email"><span data-html="email"></span><i class="premium" data-show="$data.premium == true">Premium</i></div>
             <div class="body" data-html="body"></div>
