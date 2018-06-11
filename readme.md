@@ -26,9 +26,14 @@
  
 ### Örnek Kullanım
 <<<<<<< HEAD
+<<<<<<< HEAD
   
 > <script>
     function onClick(e){
+=======
+```  
+<script>function onClick(e){
+>>>>>>> refs/remotes/origin/master
 =======
 ```  
 <script>function onClick(e){
