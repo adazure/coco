@@ -1,21 +1,51 @@
+/**
+ * İlgili nesne üzerindeki name parametresine ait bilgiyi getirir
+ * @param name
+ */
 HTMLElement.prototype.getAttr = function (name) {
     return this.getAttribute(name);
 };
+/**
+ * İlgili nesne üzerindeki name parametresine ait [data-<name>] bilgisini getirir
+ * @param name
+ */
 HTMLElement.prototype.getData = function (name) {
     return this.getAttribute('data-' + name);
 };
+/**
+ *
+ * İlgili nesne üzerindeki name parametresine ait data bilgisini siler
+ * @param name
+ */
 HTMLElement.prototype.remData = function (name) {
     this.removeAttribute('data-' + name);
 };
+/**
+ * İlgili nesne üzerindeki name parametresine ait bilgiyi kontrol eder
+ * @param name
+ */
 HTMLElement.prototype.hasAttr = function (name) {
     return this.hasAttribute(name);
 };
+/**
+ * İlgili nesne üzerindeki name parametresine ait data bilgisini kontrol eder
+ * @param name
+ */
 HTMLElement.prototype.hasData = function (name) {
     return this.hasAttribute('data-' + name);
 };
+/**
+ * İlgili nesneye yeni Event ekler.
+ * @param name <click>|<change>|<keyup>|..... gibi tanımları alır
+ * @param action Olayın tetiklendiğinde çalıştırılması istenen method
+ */
 HTMLElement.prototype.setAction = function (name, action) {
     this.addEventListener(name, action);
 };
+/**
+ * İlgili nesneye yeni sınıf değerleri atar
+ * Virgül (,) ile bir den fazla parametre ile sınıf atanabilir. Örnek: .setClass('one','two','three');
+ */
 HTMLElement.prototype.setClass = function () {
     var self = this;
     for (var i = 0; i < arguments.length; i++) {
@@ -25,6 +55,10 @@ HTMLElement.prototype.setClass = function () {
     }
     return this;
 };
+/**
+ * İlgili nesneye style özellikleri girmek için kullanılır
+ * @param args Object tipinde değerler alır. Örnek : .setCSS({ border:1px solid #fff, fontSize:'2em'})
+ */
 HTMLElement.prototype.setCSS = function (args) {
     var self = this;
     Object.keys(args).forEach(function (f) {
@@ -32,6 +66,10 @@ HTMLElement.prototype.setCSS = function (args) {
     });
     return this;
 };
+/**
+ * İlgili nesnenin alt elementlerini verir
+ * @param index Index değeri belirtilmek istenirse, ilgili nesnenin belirtilen katmanındaki nesne geri döndürülür
+ */
 HTMLElement.prototype.getChildren = function (index) {
     var el = this;
     return this.children;
@@ -39,6 +77,11 @@ HTMLElement.prototype.getChildren = function (index) {
 var Coco = (function () {
     function Coco() {
     }
+    /**
+     *
+     * @param url Bağlanılmak istenen URL bilgisi. http://...
+     * @param action Bağlantı sağlandığında çalıştırılması istenen method.
+     */
     Coco.url = function (url, action) {
         var result = [];
         var xhttp = new XMLHttpRequest();
