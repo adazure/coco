@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+
+    <style>
+        .item {
+            border-bottom: 1px solid #ddd;
+            padding: 10px;
+        }
+        
+        .item.active {
+            background-color: #333;
+            color: white;
+        }
+        
+        .item .name {
+            font-weight: bold;
+        }
+        
+        .item .email {
+            font-style: italic;
+        }
+        
+        .item .body {
+            color: #999;
+        }
+        
+        .col {
+            float: left;
+        }
+        
+        .col-6 {
+            width: 50%;
+        }
+        
+        .item i.premium {
+            background-color: #c60;
+            color: white;
+            padding: 2px;
+            display: inline-block;
+            font-size: 10px;
+            border-radius: 5px;
+            margin-left: 3px;
+            visibility: hidden;
+        }
+    </style>
+
+    <script>
+        var data = [
+
+        ];
+
+        function onClick(e) {
+            console.log(e.item.id);
+        }
+    </script>
+</head>
+
+<body>
+
+    <div class="col-6 col">
+
+        <div class="item" data-api-url="https://jsonplaceholder.typicode.com/comments">
+            <div class="name" data-html="name"></div>
+            <div class="email"><span data-html="email"></span><i class="premium">Premium</i></div>
+            <div class="body" data-html="body"></div>
+            <div>
+                <input type="button" data-click="onClick" value="More details" />
+            </div>
+        </div>
+    </div>
+    <div class="col-6 col">
+
+        <div class="item" data-api-url="https://jsonplaceholder.typicode.com/posts">
+            <div class="name" data-html="title"></div>
+            <div class="body" data-html="body"></div>
+            <div>
+                <input type="button" data-click="onClick" value="More details" />
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
