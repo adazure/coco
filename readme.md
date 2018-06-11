@@ -26,7 +26,8 @@
  
 ### Örnek Kullanım
   
-> <script>function onClick(e){
+> <script>
+    function onClick(e){
       console.log(e);
       console.log(e.items);
       console.log(e.event);
